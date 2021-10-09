@@ -1,3 +1,4 @@
+:: Designed for Windows !
 @echo off
 cd %1
 g++ main.cpp -o main.exe
