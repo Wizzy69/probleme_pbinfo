@@ -1,32 +1,31 @@
 #include <iostream>
-
 using namespace std;
-int cmmdc(int a, int b)
+
+int main()
 {
-    while (b)
+    int x;
+    int min = 9999999999;
+    int max = -9999999999;
+    int a, b;
+
+    cin >> x;
+    for (int i = 1; i <= x; i++)
+    {
+        int n;
+        cin >> n;
+        if (n < min)
+            min = n;
+        if (n > max)
+            max = n;
+    }
+    a = max;
+    b = min;
+    while (b != 0)
     {
         int r = a % b;
         a = b;
         b = r;
     }
-
-    return a;
-}
-
-int main()
-{
-    int A, B;
-    int n;
-    int a[1000];
-    cin >> n;
-    for (int i = 0; i < n; i++)
-        cin >> a[i];
-
-    for (int i = 0; i < n; ++i)
-        for (int j = i; j < n; ++j)
-        {
-            int c = cmmdc(a[i], a[j]);
-            int x = a[i] / c;
-            int y = a[j] / c;
-        }
+    cout << min / a << "/" << max / a;
+    return 0;
 }
