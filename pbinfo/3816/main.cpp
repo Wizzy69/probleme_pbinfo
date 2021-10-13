@@ -16,9 +16,7 @@ int main()
     {
         double x = (d - b) / (a - c);
         double y = a * x + b;
-
-        cout << x << ".00"
-             << " " << y << ".00";
+        cout << x << " " << y;
     }
     return 0;
 }
