@@ -1,18 +1,30 @@
 #include <iostream>
-
 using namespace std;
 
-void cmmdc(int a, int b)
+int cmmdc(int a, int b)
 {
-    for (int d = 1; d < a; d++)
-        if (a % d == 0 && b % d == 0)
-            cout << d << " ";
+    while (b)
+    {
+        int r = a % b;
+        a = b;
+        b = r;
+    }
+    return a;
 }
-
 int main()
 {
-    int a, b;
+    int a, b, cmd;
 
-    cin >> a >> b;
-    cmmdc(a, b);
+    cin >> a;
+    cin >> b;
+    cmd = cmmdc(a, b);
+
+    cout << 1 << ' ';
+    for (int d = 2; d <= cmd / 2; d++)
+        if (cmd % d == 0)
+            cout << d << ' ';
+    if (cmd > 1)
+        cout << cmd;
+
+    return 0;
 }
