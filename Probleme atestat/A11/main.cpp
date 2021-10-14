@@ -25,6 +25,7 @@ void numarare(int n, int a[])
     for (int i = 0; i < n; i++)
         a[b[i]] = c[i];
 }
+
 void afisare(int n, int v[])
 {
     ofstream fout("sort.out");
