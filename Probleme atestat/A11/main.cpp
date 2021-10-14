@@ -12,7 +12,7 @@ void citire(int &n, int a[])
 void numarare(int n, int a[])
 {
     int c[51], b[51] = {0};
-    //copy(a, c);
+
     for (int i = 0; i < n; i++)
         c[i] = a[i];
 
@@ -22,8 +22,10 @@ void numarare(int n, int a[])
                 b[i]++;
             else
                 b[j]++;
+
     for (int i = 0; i < n; i++)
         a[b[i]] = c[i];
+
 }
 
 void afisare(int n, int v[])
