@@ -10,8 +10,8 @@ void sub(double v[2000], int &n)
     for (int i = 0; i < n; i++)
     {
         n++;
-        for (int j = n - 1; j > i; j--)
-            v[j] = v[j - 1];
+        for (int j = n; j >= i; j--)
+            v[j + 1] = v[j];
         v[i] = sum;
         i++;
     }
