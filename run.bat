@@ -1,7 +1,7 @@
 :: Designed for Windows !
 @echo off
-cd %*
+cd ./pbinfo/%*
 g++ *.cpp -o app.exe
 app.exe
-cd ../../../
+cd ../../
 @echo on
