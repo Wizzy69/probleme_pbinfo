@@ -5,7 +5,7 @@ bool cautare_binara(int a[], int n, int x)
 {
     int li, lf, m;
     li = 0;
-    lf = n-1;
+    lf = n - 1;
     m = lf / 2;
     while (li <= lf)
     {
@@ -37,10 +37,10 @@ void reuniune(int a[], int b[], int n, int m, int &k, int c[])
     {
         if (a[i] < b[j])
             c[k++] = a[i++];
-        else if(a[i] > b[j])
+        else if (a[i] > b[j])
             c[k++] = b[j++];
         else
-            c[k++] = a[i],i++, j++;
+            c[k++] = a[i], i++, j++;
     }
     while (i < n)
         c[k++] = a[i++];
@@ -64,12 +64,12 @@ int main()
 
     int k = 0;
     int *c = new int[n + m];
-    
+
     reuniune(a, b, n, m, k, c);
     for (int i = 0; i < k; i++)
         cout << c[i] << " ";
     cout << '\n';
-    
+
     intersectie(a, b, n, m, k, c);
     for (int i = 0; i < k; i++)
         cout << c[i] << " ";
