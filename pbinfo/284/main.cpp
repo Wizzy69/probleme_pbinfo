@@ -17,7 +17,7 @@ int main()
     int i, j;
     int p;
     i = p = 0;
-    j = m-1;
+    j = m - 1;
     while (i < n && j >= 0)
     {
         if (a[i] < b[j])
@@ -53,7 +53,14 @@ int main()
             if (a[i] % 2 == 0)
             {
                 p++;
-                fout << a[i] << " " << b[j] << " ";
+                fout << a[i] << " ";
+                if (p == 20)
+                {
+                    fout << '\n';
+                    p = 0;
+                }
+                fout << a[i] << " ";
+                p++;
                 if (p == 20)
                 {
                     fout << '\n';
@@ -65,14 +72,15 @@ int main()
         }
     }
 
-    while(i<n)
+    while (i < n)
     {
-        if(a[i]%2==0)
+        if (a[i] % 2 == 0)
         {
             fout << a[i] << " ";
             p++;
-            if(p==20) {
-                fout << "\n";
+            if (p == 20)
+            {
+                fout << '\n';
                 p = 0;
             }
         }
@@ -87,7 +95,7 @@ int main()
             p++;
             if (p == 20)
             {
-                fout << "\n";
+                fout << '\n';
                 p = 0;
             }
         }

@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-bool cautare_binara(int a[], int n, int x)
+bool cautare_binara(int *a, int n, int x)
 {
     int li, lf, m;
     li = 0;
@@ -20,7 +20,7 @@ bool cautare_binara(int a[], int n, int x)
     return false;
 }
 
-void intersectie(int a[], int b[], int n, int m, int &k, int c[])
+void intersectie(int *a, int *b, int n, int m, int &k, int *&c)
 {
     k = 0;
     for (int i = 0; i < n; i++)
@@ -28,7 +28,7 @@ void intersectie(int a[], int b[], int n, int m, int &k, int c[])
             c[k++] = a[i];
 }
 
-void reuniune(int a[], int b[], int n, int m, int &k, int c[])
+void reuniune(int *a, int *b, int n, int m, int &k, int *&c)
 {
     k = 0;
     int i, j;
