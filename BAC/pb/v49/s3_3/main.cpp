@@ -11,9 +11,11 @@ int main()
     int nrMIN;
     int cMAX;
     int x;
+
     fin >> x;
     nrMIN = x;
     cmax(x, cMAX);
+    
     while (fin >> x)
     {
         int c;
@@ -24,6 +26,7 @@ int main()
         if (c > cMAX)
             cMAX = c, nrMIN = x;
     }
+    
     cout << cMAX << " " << nrMIN;
 }
 void cmax(int a, int &b)
