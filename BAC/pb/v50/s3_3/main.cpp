@@ -16,24 +16,14 @@ int main()
     cin >> n;
     int ok = 0;
     if (a < b)
-    {
-        for (int i = a; i <= b; i++)
-            if (divxy(i, n) == 1)
-            {
-                ok = 1;
-                cout << i << " ";
-            }
-    }
-    else
-    {
+        swap(a, b);
+    for (int i = a; i <= b; i++)
+        if (divxy(i, n) == 1 && i<n)
+        {
+            ok = 1;
+            cout << i << " ";
+        }
 
-        for (int i = b; i <= a; i++)
-            if (divxy(i, n) == 1)
-            {
-                ok = 1;
-                cout << i << " ";
-            }
-    }
     if (ok == 0)
         cout << "NU";
 }
