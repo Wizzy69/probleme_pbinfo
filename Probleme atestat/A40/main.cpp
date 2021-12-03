@@ -11,35 +11,41 @@ int verif(int &d,int &m,int &y)
         cout<<"datele nu sunt valide";
         return 0;
     }
+
     if(m%2==1 && m<8)
         if(d>31)
         {
             cout<<"datele nu sunt valide";
             return 0;
         }
+
     if(m%2==0 && m<8 && m!=2)
         if(d>30)
         {
             cout<<"datele nu sunt valide";
             return 0;
         }
+
     if(m%2==1 && m>7)
         if(d>30)
         {
             cout<<"datele nu sunt valide";
             return 0;
         }
+
     if(m%2==0 && m>7)
         if(d>31)
         {
             cout<<"datele nu sunt valide";
             return 0;
         }
+
     if(m<1  || d<1 || y<0)
     {
         cout<<"datele nu sunt valide";
         return 0;
     }
+
     if(m==2)
         if(y%400==0)
         {
