@@ -83,6 +83,4 @@ int main()
             else if (i > j)
                 a[i][j] = '+';
             else a[i][j] = a[i][j-1] + 1;
-
-    
 */
