@@ -39,6 +39,8 @@ s <- 0
 │s <- s+c
 └■
 scrie s
+
+d)
 */
 #include <iostream>
 using namespace std;
