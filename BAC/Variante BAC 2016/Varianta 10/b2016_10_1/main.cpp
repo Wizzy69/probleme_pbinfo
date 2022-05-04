@@ -50,5 +50,6 @@ int main()
                 m++;
         }
     }
+    cout << m << ' ' << n;
     return 0;
 }
